@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>RP Flask REST API</title>
 </head>
+
 <body>
-   <h1>Hello World</h1> 
+    <h1>Hello People</h1>
+    <ul>
+        {% for person in people %}
+        <li><a href="/people/{{ person.lname }}">{{ person.fname }} {{ person.lname }}</a></li>
+        {% endfor %}
+    </ul>
 </body>
+
 </html>
